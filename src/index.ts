@@ -13,11 +13,11 @@ mongoose.connect(process.env.MONGO_URL as string).then(() => {
 const app = express();
 app.use(express.json());
 
-interface User {
+export interface User {
   userId: string;
 }
 
-interface AuthRequest extends Request {
+export interface AuthRequest extends Request {
   user?: User;
 }
 
